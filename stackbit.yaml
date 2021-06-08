@@ -1,0 +1,341 @@
+stackbitVersion: ~0.3.0
+ssgName: jekyll
+publishDir: _site
+dataDir: _data
+pagesDir: ''
+models:
+  page_1:
+    type: page
+    label: Page 1
+    match:
+      - _includes/social/icons.md
+      - pages/portfolio.md
+    fields: []
+  layout:
+    type: page
+    label: Layout
+    folder: _layouts
+    match: '*'
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+  page_2:
+    type: page
+    label: Page 2
+    match:
+      - _portfolio/cake.md
+      - _portfolio/circus.md
+      - _portfolio/gitlecture.md
+      - _portfolio/hanoi.md
+      - _portfolio/jekyllblog.md
+      - _portfolio/ninja.md
+      - _portfolio/safe.md
+      - _portfolio/submarine.md
+      - _portfolio/tictactoe.md
+      - _posts/2013-10-18-blogging-with-title.md
+      - _posts/2013-11-02-Tech-stuff-example.md
+      - _posts/2013-12-12-Generate-a-table-of-content.md
+      - _posts/2014-08-08-Markup-Syntax-Highlighting.md
+      - _posts/2014-11-26-lorem-ipsum.md
+      - _posts/2014-11-27-whats-your-title.md
+      - _posts/2014-11-28-markdown-and-html.md
+      - _posts/2014-11-29-feature-images.md
+      - _posts/2017-09-17-Use-Bootstrap.md
+      - _posts/2019-05-18-color-post.md
+      - _posts/2019-06-30-sample-post.md
+      - _posts/2021-04-27-dark-mode.md
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: title
+        label: Title
+      - type: image
+        name: feature-img
+        label: Feature Img
+      - type: image
+        name: img
+        label: Img
+      - type: string
+        name: date
+        label: Date
+      - type: list
+        name: tags
+        label: Tags
+        items:
+          type: string
+      - type: image
+        name: thumbnail
+        label: Thumbnail
+      - type: string
+        name: author
+        label: Author
+      - type: string
+        name: excerpt_separator
+        label: Excerpt Separator
+      - type: string
+        name: color
+        label: Color
+      - type: boolean
+        name: hide_title
+        label: Hide Title
+      - type: boolean
+        name: bootstrap
+        label: Bootstrap
+  page:
+    type: page
+    label: Page
+    folder: pages
+    match:
+      - 404.md
+      - about.md
+      - gallery.md
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: permalink
+        label: Permalink
+      - type: boolean
+        name: hide
+        label: Hide
+      - type: image
+        name: feature-img
+        label: Feature Img
+      - type: list
+        name: tags
+        label: Tags
+        items:
+          type: string
+      - type: string
+        name: subtitle
+        label: Subtitle
+      - type: string
+        name: gallery_path
+        label: Gallery Path
+  page_3:
+    type: page
+    label: Page 3
+    folder: pages
+    match:
+      - search.md
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: permalink
+        label: Permalink
+      - type: string
+        name: subtitle
+        label: Subtitle
+      - type: image
+        name: feature-img
+        label: Feature Img
+      - type: string
+        name: icon
+        label: Icon
+  page_4:
+    type: page
+    label: Page 4
+    folder: pages
+    match:
+      - tags.md
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: permalink
+        label: Permalink
+      - type: string
+        name: icon
+        label: Icon
+  authors:
+    type: data
+    label: Authors
+    file: authors.yml
+    fields:
+      - type: object
+        name: rohanchandra
+        label: Rohanchandra
+        fields:
+          - type: string
+            name: name
+            label: Name
+          - type: string
+            name: avatar
+            label: Avatar
+          - type: string
+            name: url
+            label: Url
+      - type: object
+        name: sylhare
+        label: Sylhare
+        fields:
+          - type: string
+            name: name
+            label: Name
+          - type: string
+            name: avatar
+            label: Avatar
+          - type: string
+            name: url
+            label: Url
+      - type: object
+        name: mmistakes
+        label: Mmistakes
+        fields:
+          - type: string
+            name: name
+            label: Name
+          - type: string
+            name: avatar
+            label: Avatar
+          - type: string
+            name: url
+            label: Url
+      - type: object
+        name: mhagnumdw
+        label: Mhagnumdw
+        fields:
+          - type: string
+            name: name
+            label: Name
+          - type: string
+            name: avatar
+            label: Avatar
+      - type: object
+        name: unknown
+        label: Unknown
+        fields:
+          - type: string
+            name: name
+            label: Name
+  biblio:
+    type: data
+    label: Biblio
+    file: biblio.yaml
+    isList: true
+    items:
+      type: object
+      fields:
+        - type: string
+          name: authors
+          label: Authors
+        - type: string
+          name: title
+          label: Title
+        - type: string
+          name: key
+          label: Key
+  language:
+    type: data
+    label: Language
+    file: language.yml
+    fields:
+      - type: string
+        name: str_follow_on
+        label: Str Follow On
+      - type: string
+        name: str_rss_follow
+        label: Str Rss Follow
+      - type: string
+        name: str_share_on
+        label: Str Share On
+      - type: string
+        name: str_add_to
+        label: Str Add To
+      - type: string
+        name: str_email
+        label: Str Email
+      - type: string
+        name: str_tweet
+        label: Str Tweet
+      - type: string
+        name: str_pin_it
+        label: Str Pin It
+      - type: string
+        name: str_next_post
+        label: Str Next Post
+      - type: string
+        name: str_previous_post
+        label: Str Previous Post
+      - type: string
+        name: str_next_page
+        label: Str Next Page
+      - type: string
+        name: str_previous_page
+        label: Str Previous Page
+      - type: string
+        name: str_javascript_required_disqus
+        label: Str Javascript Required Disqus
+      - type: string
+        name: str_no_result_found
+        label: Str No Result Found
+      - type: string
+        name: str_cookie_approve
+        label: Str Cookie Approve
+      - type: string
+        name: str_cookie_disclaimer
+        label: Str Cookie Disclaimer
+      - type: list
+        name: str_months
+        label: Str Months
+        items:
+          type: string
+  social:
+    type: data
+    label: Social
+    file: social.yml
+    fields:
+      - type: boolean
+        name: rss
+        label: Rss
+      - type: string
+        name: github
+        label: Github
+      - type: object
+        name: feed
+        label: Feed
+        fields:
+          - type: string
+            name: path
+            label: Path
+      - type: object
+        name: share
+        label: Share
+        fields:
+          - type: boolean
+            name: facebook
+            label: Facebook
+          - type: boolean
+            name: twitter
+            label: Twitter
+          - type: boolean
+            name: tumblr
+            label: Tumblr
+          - type: boolean
+            name: pinterest
+            label: Pinterest
+          - type: boolean
+            name: reddit
+            label: Reddit
+          - type: boolean
+            name: linkedin
+            label: Linkedin
+          - type: boolean
+            name: email
+            label: Email

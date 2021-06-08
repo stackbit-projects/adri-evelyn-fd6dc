@@ -1,0 +1,37 @@
+baseurl: ''
+url: ''
+title: Type on Strap
+description: A website with blog posts and pages
+avatar: assets/img/triangle.png
+favicon: assets/favicon.ico
+header_text: Change <code>header_text</code> in <code>_config.yml</code>
+header_feature_image: assets/img/pexels/triangular.jpeg
+footer_text: >
+  Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a
+  href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
+excerpt: true
+post_navigation: true
+color_image: /assets/img/lineart.png
+katex: true
+mermaid: true
+google_analytics: null
+cookie_consent: false
+disqus_shortname: null
+cusdis_app_id: null
+color_theme: auto
+paginate: 5
+paginate_path: '/blog/page:num'
+collections:
+  portfolio:
+    output: true
+    permalink: '/:collection/:name'
+plugins:
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-feed
+exclude:
+  - .jekyll-cache
+  - .idea
+  - vendor/*
+  - assets/node_modules/*
+remote_theme: sylhare/Type-on-Strap
